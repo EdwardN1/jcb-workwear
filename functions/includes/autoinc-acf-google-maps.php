@@ -5,7 +5,7 @@
 function joints_acf_google_map_api($api)
 {
 
-	$api['key'] = 'AIzaSyBj4Qpiibr495_xFtYamXIxUrvocOWKf0Q';
+	$api['key'] = '';
 
 	return $api;
 
