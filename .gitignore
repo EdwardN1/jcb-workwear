@@ -4,4 +4,4 @@ bower_components/
 .idea/
 npm-debug.log
 yarn.lock
-functions/includes/autoinc-acf-google-maps.php
+autoinc-acf-google-maps.php
