@@ -1,0 +1,17 @@
+@for $i from 1 through 480 {
+  .height-#{$i} {
+    min-height: #{$i}px;
+  }
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.block {
+  display: block;
+}

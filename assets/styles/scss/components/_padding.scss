@@ -1,0 +1,27 @@
+@for $i from 0 through 100 {
+  .toppad-#{$i} {
+    padding-top: #{$i}px;
+  }
+  .bottompad-#{$i} {
+    padding-bottom: #{$i}px;
+  }
+  .leftpad-#{$i} {
+    padding-left: #{$i}px;
+  }
+  .rightpad-#{$i} {
+    padding-right: #{$i}px;
+  }
+
+  .toprempad-#{$i} {
+    padding-top: #{$i}rem;
+  }
+  .bottomrempad-#{$i} {
+    padding-bottom: #{$i}rem;
+  }
+  .leftrempad-#{$i} {
+    padding-left: #{$i}rem;
+  }
+  .rightrempad-#{$i} {
+    padding-right: #{$i}rem;
+  }
+}

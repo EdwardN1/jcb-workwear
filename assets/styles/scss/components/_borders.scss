@@ -1,0 +1,24 @@
+@for $i from 1 through 50 {
+  .borderradius-#{$i} {
+    border-radius: #{$i}px;
+  }
+  .borderradius-#{$i}p {
+    border-radius: 0% + $i;
+  }
+}
+
+.outline-green {
+  outline: 1px solid green;
+}
+
+.outline-red {
+  outline: 1px solid red;
+}
+
+.outline-blue {
+  outline: 1px solid blue;
+}
+
+.outline-yellow {
+  outline: 1px solid yellow;
+}

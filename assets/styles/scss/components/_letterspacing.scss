@@ -1,0 +1,10 @@
+@for $i from 1 through 8 {
+  .letterspacing-#{$i} {
+    letter-spacing: #{$i}px;
+    &.addtolinks {
+      a {
+        letter-spacing: #{$i}px;
+      }
+    }
+  }
+}

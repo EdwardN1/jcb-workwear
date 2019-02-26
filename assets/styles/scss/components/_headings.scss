@@ -1,0 +1,87 @@
+.heading {
+  font-family: "Heebo", sans-serif;
+  &.large {
+    font-size: 60px;
+  }
+  &.extra-large {
+    font-size: 65px;
+  }
+  &.heavy, &.black {
+    font-weight: 900;
+  }
+  &.medium-weight, &.ExtraBold {
+    font-weight: 800;
+  }
+  &.caps, &.uppercase {
+    text-transform: uppercase;
+    &.addtolinks {
+      a {
+        text-transform: uppercase;
+      }
+    }
+  }
+  &.normal {
+    font-family: "Rambla", sans-serif;
+  }
+  &.small {
+    font-size: 20px;
+  }
+  &.medium-size {
+    font-size: 30px;
+  }
+}
+
+.heebo {
+  font-family: "Heebo", sans-serif;
+  &.addtolinks {
+    a {
+      font-family: "Heebo", sans-serif;
+    }
+  }
+  &.ExtraBold {
+    font-weight: 800;
+  }
+}
+
+.rambla {
+  font-family: "Rambla", sans-serif;
+  &.addtolinks {
+    font-family: "Rambla", sans-serif;
+  }
+}
+
+.white {
+  color: $white;
+  &.addtolinks {
+    a {
+      color: $white;
+    }
+  }
+}
+
+.orange {
+  color: $primary-color;
+  &.addtolinks {
+    a {
+      color: $primary-color;
+    }
+  }
+}
+
+.black {
+  color: $black;
+  &.addtolinks {
+    a {
+      color: $black;
+    }
+  }
+}
+
+.caps {
+  text-transform: uppercase;
+  &.addtolinks {
+    a {
+      text-transform: uppercase;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+#top-bar-menu {
+  .spaceevenly {
+    ul {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style-type: none;
+      display: inline-block;
+      width: auto;
+      padding-left: 2em;
+      padding-right: 2em;
+      position: relative;
+      &:after {
+        content: "|";
+        position: absolute;
+        top: 0.25em;
+        right: 0;
+      }
+
+      > ul {
+        background-color: $dark-gray;
+        min-width: 330px;
+        li {
+          display: block;
+          padding: 0;
+          &:after {
+            content: "";
+          }
+        }
+      }
+    }
+
+    li:last-child {
+      padding-right: 0;
+      &:after {
+        content: "";
+      }
+    }
+
+    li:first-child {
+      padding-left: 0;
+    }
+  }
+}
