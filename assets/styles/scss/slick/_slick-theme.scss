@@ -8,13 +8,13 @@
 // "\2022" outputs ascii character "•"
 
 $slick-font-path: "./fonts/" !default;
-$slick-font-family: "slick" !default;
-$slick-loader-path: "./" !default;
-$slick-arrow-color: white !default;
+$slick-font-family: 'Rambla', sans-serif;
+$slick-loader-path: "../images/" !default;
+$slick-arrow-color: #ffffff;
 $slick-dot-color: black !default;
 $slick-dot-color-active: $slick-dot-color !default;
-$slick-prev-character: "\2190" !default;
-$slick-next-character: "\2192" !default;
+$slick-prev-character: " " !default;
+$slick-next-character: " " !default;
 $slick-dot-character: "\2022" !default;
 $slick-dot-size: 6px !default;
 $slick-opacity-default: 0.75 !default;
@@ -22,28 +22,18 @@ $slick-opacity-on-hover: 1 !default;
 $slick-opacity-not-active: 0.25 !default;
 
 @function slick-image-url($url) {
-    @if function-exists(image-url) {
-        @return image-url($url);
-    }
-    @else {
-        @return url($slick-loader-path + $url);
-    }
+    @return url($slick-loader-path + $url);
 }
 
 @function slick-font-url($url) {
-    @if function-exists(font-url) {
-        @return font-url($url);
-    }
-    @else {
-        @return url($slick-font-path + $url);
-    }
+       @return url($slick-font-path + $url);
 }
 
 /* Slider */
 
 .slick-list {
     .slick-loading & {
-        background: #fff slick-image-url("ajax-loader.gif") center center no-repeat;
+        background: #fff slick-image-url("ajax-loader.gif") center no-repeat;
     }
 }
 
@@ -64,14 +54,14 @@ $slick-opacity-not-active: 0.25 !default;
 .slick-next {
     position: absolute;
     display: block;
-    height: 20px;
-    width: 20px;
-    line-height: 0px;
-    font-size: 0px;
+    height: 45px;
+    width: 25px;
+    line-height: 0;
+    font-size: 45px;
     cursor: pointer;
     background: transparent;
     color: transparent;
-    top: 50%;
+    top: 0.5rem;
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
     transform: translate(0, -50%);
@@ -91,23 +81,34 @@ $slick-opacity-not-active: 0.25 !default;
     }
     &:before {
         font-family: $slick-font-family;
-        font-size: 20px;
+        font-size: 45px;
         line-height: 1;
+        height: 45px;
+        width:25px;
+        position: absolute;
+        display: block;
         color: $slick-arrow-color;
         opacity: $slick-opacity-default;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        background-repeat: no-repeat;
+        background-position: center center;
+        content:" ";
     }
 }
 
 .slick-prev {
-    left: -25px;
+    right: 2.5rem;
+    left: auto;
+    z-index: 1;
+
     [dir="rtl"] & {
         left: auto;
-        right: -25px;
+        right: 1rem;
     }
     &:before {
         content: $slick-prev-character;
+        background-image: slick-image-url("arrow-white-left.png");
         [dir="rtl"] & {
             content: $slick-next-character;
         }
@@ -115,13 +116,16 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 .slick-next {
-    right: -25px;
+    right: 0.5rem;
+    left: auto;
+    z-index: 1;
     [dir="rtl"] & {
-        left: -25px;
-        right: auto;
+        left: auto;
+        right: 3rem;
     }
     &:before {
         content: $slick-next-character;
+        background-image: slick-image-url("arrow-white-right.png");
         [dir="rtl"] & {
             content: $slick-prev-character;
         }
@@ -158,8 +162,8 @@ $slick-opacity-not-active: 0.25 !default;
             height: 20px;
             width: 20px;
             outline: none;
-            line-height: 0px;
-            font-size: 0px;
+            line-height: 0;
+            font-size: 0;
             color: transparent;
             padding: 5px;
             cursor: pointer;
@@ -189,6 +193,43 @@ $slick-opacity-not-active: 0.25 !default;
         &.slick-active button:before {
             color: $slick-dot-color-active;
             opacity: $slick-opacity-default;
+        }
+    }
+}
+
+.slider-container {
+    max-height: 400px;
+    height: 39.024vw;
+    .slide-description {
+        margin-left: 0;
+        height: 210px;
+        padding-top: 8%;
+        .slide-shader {
+            display: inline-block;
+            height: 210px;
+            background-color: rgba(0,0,0,0.6);
+            width: auto;
+            padding-top: 2em;
+            padding-left: 1em;
+            padding-right: 1em;
+            h3 {
+                font-family: "Heebo", sans-serif;
+                text-transform: uppercase;
+                font-weight: 800;
+                font-size: 21px;
+                line-height: 1.1;
+            }
+            h1, h2 {
+                font-family: "Heebo", sans-serif;
+                font-weight: 800;
+                font-size: 65px;
+                line-height: 1.1;
+            }
+            p {
+                font-family: "Rambla", sans-serif;
+                font-size: 20px;
+                line-height: 22px;
+            }
         }
     }
 }
