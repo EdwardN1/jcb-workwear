@@ -26,7 +26,7 @@ if ( ! $messages ) {
 ?>
 
 <?php foreach ( $messages as $message ) : ?>
-	<div class="woocommerce-message" role="alert">
+	<div class="woocommerce-message heebo caps dark-grey fontsize-20 ExtraBold" role="alert" style="line-height: 2.1;">
 		<?php
 			echo wc_kses_notice( $message );
 		?>

@@ -1,0 +1,44 @@
+#footer-links {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  li {
+    list-style-type: none;
+    display: inline-block;
+    width: auto;
+    padding-left: 1em;
+    padding-right: 1em;
+    position: relative;
+    a {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &:after {
+      content: "|";
+      position: absolute;
+      top: 0.4em;
+      right: 0;
+    }
+
+    ul {
+      display: none;
+      li {
+        display: none;
+      }
+    }
+  }
+  li:last-child {
+    padding-right: 0;
+
+    &:after {
+      content: "";
+    }
+  }
+
+  li:first-child {
+    padding-left: 0;
+    a {
+      padding-left: 0;
+    }
+  }
+}

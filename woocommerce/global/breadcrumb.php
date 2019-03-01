@@ -20,28 +20,30 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-
 if ( ! empty( $breadcrumb ) ) {
 
-	echo $wrap_before;
+	//echo $wrap_before;
+	echo '<div class="heebo ExtraBold fontsize-20 orange toppad-8 bottompad-8">';
 
 	foreach ( $breadcrumb as $key => $crumb ) {
 
 		echo $before;
 
 		if ( ! empty( $crumb[1] ) && sizeof( $breadcrumb ) !== $key + 1 ) {
-			echo '<a href="' . esc_url( $crumb[1] ) . '">' . esc_html( $crumb[0] ) . '</a>';
+			echo '<a href="' . esc_url( $crumb[1] ) . '" class="caps dark-grey">' . esc_html( $crumb[0] ) . '</a>';
 		} else {
-			echo esc_html( $crumb[0] );
+			echo '<span class="caps dark-grey">'.esc_html( $crumb[0] ).'</span>';
 		}
 
 		echo $after;
 
 		if ( sizeof( $breadcrumb ) !== $key + 1 ) {
-			echo $delimiter;
+			//echo $delimiter;
+			echo '&nbsp;&nbsp;>&nbsp;&nbsp;';
 		}
 	}
 
-	echo $wrap_after;
+	//echo $wrap_after;
+	echo '</div>';
 
 }

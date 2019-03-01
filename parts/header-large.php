@@ -14,7 +14,7 @@
                     <div class="large-10 medium-10 small-10 heebo heading ExtraBold caps white cell fontsize-24">call us
                         on <?php the_field( 'telephone_number', 'option' ); ?></div>
                     <div class="large-2 medium-2 small-2 heebo heading ExtraBold small caps orange text-right cell"><span
-                                class="cart">2</span></div>
+                                class="cart-icon">2</span></div>
                 </div>
                 <div class="grid-container full toprempad-1">
                     <div class="grid-x">

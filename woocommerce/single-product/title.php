@@ -20,4 +20,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-the_title( '<h1 class="product_title entry-title">', '</h1>' );
+the_title( '<h1 class="product_title entry-title heebo heading heavy caps large" style="line-height: 1; margin: 0;">', '</h1>' );
+echo '<h3 class="rambla fontsize-20">'.get_field('sub_heading').'</h3>';
