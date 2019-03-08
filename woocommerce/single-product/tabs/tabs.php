@@ -10,7 +10,7 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see 	https://docs.woocommerce.com/document/template-structure/
+ * @see    https://docs.woocommerce.com/document/template-structure/
  * @author  WooThemes
  * @package WooCommerce/Templates
  * @version 2.4.0
@@ -20,29 +20,68 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-/**
- * Filter tabs and allow third parties to add their own.
- *
- * Each tab is an array containing title, callback and priority.
- * @see woocommerce_default_product_tabs()
- */
-$tabs = apply_filters( 'woocommerce_product_tabs', array() );
+global $product;
 
-if ( ! empty( $tabs ) ) : ?>
+$tabCount     = 0;
+$tabsHeadings = '';
+$tabsSections = '';
 
-	<div class="woocommerce-tabs wc-tabs-wrapper">
-		<ul class="tabs wc-tabs" role="tablist">
-			<?php foreach ( $tabs as $key => $tab ) : ?>
-				<li class="<?php echo esc_attr( $key ); ?>_tab" id="tab-title-<?php echo esc_attr( $key ); ?>" role="tab" aria-controls="tab-<?php echo esc_attr( $key ); ?>">
-					<a href="#tab-<?php echo esc_attr( $key ); ?>"><?php echo apply_filters( 'woocommerce_product_' . $key . '_tab_title', esc_html( $tab['title'] ), $key ); ?></a>
-				</li>
-			<?php endforeach; ?>
-		</ul>
-		<?php foreach ( $tabs as $key => $tab ) : ?>
-			<div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--<?php echo esc_attr( $key ); ?> panel entry-content wc-tab" id="tab-<?php echo esc_attr( $key ); ?>" role="tabpanel" aria-labelledby="tab-title-<?php echo esc_attr( $key ); ?>">
-				<?php if ( isset( $tab['callback'] ) ) { call_user_func( $tab['callback'], $key, $tab ); } ?>
-			</div>
-		<?php endforeach; ?>
-	</div>
 
-<?php endif; ?>
+if ( have_rows( 'product_tabs', $product->get_id() ) ):
+
+?>
+<div class="product-tabs">
+	<?php
+
+	while ( have_rows( 'product_tabs', $product->get_id() ) ): the_row();
+		$tabCount ++;
+		$tabheadingClass = '';
+		if ( $tabCount == 1 ) {
+			$tabsHeadings .= '<li class="tabs-title is-active"><a href="#panel' . $tabCount . '" aria-selected="true"><p>' . get_sub_field( 'tab_heading' ) . '</p></a></li>';
+		} else {
+			$tabsHeadings .= '<li class="tabs-title"><a href="#panel' . $tabCount . '"><p>' . get_sub_field( 'tab_heading' ) . '</p></a></li>';
+		}
+
+		if ( $tabCount == 1 ) {
+			$tabsSections .= '<div class="tabs-panel is-active" id="panel' . $tabCount . '">';
+		} else {
+			$tabsSections .= '<div class="tabs-panel" id="panel' . $tabCount . '">';
+		}
+		$countColumns = count( get_sub_field( 'tab_columns' ) );
+		if ( have_rows( 'tab_columns' ) ):
+
+			$columnClass = '';
+			if ( $countColumns == 1 ) {
+				( $columnClass = ' class="large-12 medium-12 small-12" data-columns="' . $countColumns . '"' );
+			}
+			if ( $countColumns == 2 ) {
+				( $columnClass = ' class="large-6 medium-6 small-12 rightrempad-1" data-columns="' . $countColumns . '"' );
+			}
+			if ( $countColumns == 3 ) {
+				( $columnClass = ' class="large-4 medium-4 small-12 rightrempad-1" data-columns="' . $countColumns . '"' );
+			}
+			$tabsSections .= '<div class="grid-x">';
+			while ( have_rows( 'tab_columns' ) ): the_row();
+				$tab_column   = get_sub_field( 'tab_column' );
+				$tabsSections .= '<div' . $columnClass . '>' . $tab_column . '</div>';
+			endwhile;
+			$tabsSections .= '</div>';
+		endif;
+
+		$tabsSections .= '</div>';
+	endwhile;
+	?>
+
+    <ul class="tabs" data-tabs id="example-tabs">
+		<?php echo $tabsHeadings; ?>
+    </ul>
+
+    <div class="tabs-content" data-tabs-content="example-tabs">
+		<?php echo $tabsSections; ?>
+    </div>
+
+
+	<?php
+	endif;
+	?>
+</div>

@@ -25,3 +25,31 @@
     padding-right: #{$i}rem;
   }
 }
+
+@for $i from 0 through 100 {
+  .topmargin-#{$i} {
+    margin-top: #{$i}px;
+  }
+  .bottommargin-#{$i} {
+    margin-bottom: #{$i}px;
+  }
+  .leftmargin-#{$i} {
+    margin-left: #{$i}px;
+  }
+  .rightmargin-#{$i} {
+    margin-right: #{$i}px;
+  }
+
+  .topremmargin-#{$i} {
+    margin-top: #{$i}rem;
+  }
+  .bottomremmargin-#{$i} {
+    margin-bottom: #{$i}rem;
+  }
+  .leftremmargin-#{$i} {
+    margin-left: #{$i}rem;
+  }
+  .rightremmargin-#{$i} {
+    margin-right: #{$i}rem;
+  }
+}

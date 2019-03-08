@@ -20,4 +20,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<ul class="products columns-<?php echo esc_attr( wc_get_loop_prop( 'columns' ) ); ?>">
+<div class="grid-x grid-margin-x products columns-<?php echo esc_attr( wc_get_loop_prop( 'columns' ) ); ?>">

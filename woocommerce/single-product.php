@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header( 'shop' ); ?>
-    <div class="grid-container leftpad-0 rightpad-0">
+    <div class="grid-container leftlargepad-0 rightlargepad-0">
 		<?php
 		/**
 		 * woocommerce_before_main_content hook.

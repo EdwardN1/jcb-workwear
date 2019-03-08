@@ -24,6 +24,10 @@ function admin_style() {
 }
 add_action('admin_enqueue_scripts', 'admin_style');
 
+/**
+ * Image Slider Block
+ */
+
 add_action( 'acf/init', 'acfgbc_ImageSlider' );
 function acfgbc_ImageSlider() {
 	if ( ! function_exists( 'acf_register_block' ) ) {
@@ -46,4 +50,32 @@ function acfgbc_ImageSlider_rc( $block, $content = '', $is_preview = false ) {
 		include_once get_template_directory().'/parts/blocks/editor/styles.php';
 	}
 	include get_template_directory(). '/parts/blocks/ImageSlider.php';
+}
+
+/**
+ * Detailed Category Columns
+ */
+
+add_action( 'acf/init', 'acfgbc_DetailedCategoryColumns' );
+function acfgbc_DetailedCategoryColumns() {
+	if ( ! function_exists( 'acf_register_block' ) ) {
+		return;
+	}
+	acf_register_block( array(
+		'name'            => 'acfgbcDetailedCategoryColumns',
+		'title'           => __( 'Detailed Category Columns' ),
+		'description'     => __( 'Detailed Category Columns' ),
+		'render_callback' => 'acfgbc_DetailedCategoryColumns_rc',
+		'category'        => 'jcbworkwear',
+		'icon'            => 'tagcloud',
+		'mode'            => 'preview',
+		'supports'        => array( 'align' => false, 'multiple' => true, ),
+		'keywords'        => array( 'Row', 'Common' ),
+	) );
+}
+function acfgbc_DetailedCategoryColumns_rc( $block, $content = '', $is_preview = false ) {
+	if ($is_preview) {
+		include_once get_template_directory().'/parts/blocks/editor/styles.php';
+	}
+	include get_template_directory(). '/parts/blocks/DetailedCategoryColumns.php';
 }

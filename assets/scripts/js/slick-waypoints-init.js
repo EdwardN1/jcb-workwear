@@ -20,4 +20,21 @@ jQuery(document).ready(function ($) {
 
     $('[data-slick-slider]').slick();
 
+    $('[data-slick-slider-main]').slick({
+        slidesToShow:1,
+        slidesToScroll:1,
+        infinite:true,
+        initialSlide:0,
+        asNavFor: "#product-slider-nav",
+    });
+
+    $('[data-slick-slider-nav]').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        infinite: true,
+        asNavFor: "#product-slider-main",
+        /*centerMode: true,*/
+        focusOnSelect: true,
+    });
+
 });

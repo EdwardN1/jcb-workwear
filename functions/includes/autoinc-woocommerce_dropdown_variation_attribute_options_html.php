@@ -22,7 +22,7 @@ function jcb_variation_types( $html, $args ) {
 		$options    = $attributes[ $attribute ];
 	}
 
-    if($attribute=='pa_boot-colours') {
+    if($attribute=='pa_boot-colours'||$attribute=='pa_clothing-colours') {
 	    $args = wp_parse_args(apply_filters('woocommerce_dropdown_variation_attribute_options_args', $args), array(
 		    'options'          => false,
 		    'attribute'        => false,
@@ -82,13 +82,14 @@ function jcb_variation_types( $html, $args ) {
 
 	    $radios .= '</div>';
 
+	    //$html = '<div>'.$html.'</div>'.$styles.$radios;
 	    $html = '<div style="display: none;">'.$html.'</div>'.$styles.$radios;
     } else {
 
 	    $html = '<div class="custom-select"><select id="' . esc_attr( $id ) . '" class="' . esc_attr( $class ) . '" name="' . esc_attr( $name ) . '" data-attribute_name="attribute_' . esc_attr( sanitize_title( $attribute ) ) . '" data-show_option_none="' . ( $show_option_none ? 'yes' : 'no' ) . '">';
 
 
-	    if($attribute=='pa_boot-sizes') {
+	    if($attribute=='pa_boot-sizes'||$attribute=='pa_clothing-colours') {
 		    $html .= '<option value="">CHOOSE SIZE</option>';
         } else {
 		    $html .= '<option value="">' . esc_html( $show_option_none_text ) . '</option>';

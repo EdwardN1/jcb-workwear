@@ -22,5 +22,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $product;
 
-?>
-<p class="price small-pound heebo fontsize-50 heading heavy" style="line-height: 2;"><?php echo $product->get_price_html(); ?></p>
+
+if ($product->get_tax_class()=='zero-rate') {
+	?>
+
+    <p class="price small-pound heebo fontsize-50 heading heavy"
+       style="line-height: 2;">£<?php echo $product->get_price(); ?></p>
+
+	<?php
+} else {
+	?>
+
+    <p class="price small-pound heebo fontsize-50 heading heavy main-price"
+       style="line-height: 2;"><?php echo $product->get_price_html(); ?></p>
+
+	<?php
+}

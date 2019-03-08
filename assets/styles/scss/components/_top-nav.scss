@@ -10,8 +10,8 @@
       list-style-type: none;
       display: inline-block;
       width: auto;
-      padding-left: 2em;
-      padding-right: 2em;
+      padding-left: 0.8rem;
+      padding-right: 0.8rem;
       position: relative;
       &:after {
         content: "|";
@@ -43,5 +43,9 @@
     li:first-child {
       padding-left: 0;
     }
+  }
+  .menu .active>a, .menu .is-active>a {
+    background: none;
+    outline: 1px solid $primary-color;
   }
 }

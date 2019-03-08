@@ -1,0 +1,37 @@
+.product-tabs {
+  padding-top: 2rem;
+  .tabs {
+    border: none;
+    border-bottom: 1px solid $dark-gray;
+    .tabs-title>a:focus, .tabs-title>a[aria-selected=true] {
+      background: none;
+    }
+    .tabs-title>a {
+      font-size: 20px;
+      text-transform: uppercase;
+      font-family: "Heebo", sans-serif;
+      font-weight: 800;
+      color: $dark-gray;
+      padding: 0;
+      p {
+        margin: 0;
+      }
+    }
+    .tabs-title.is-active {
+      border-bottom: 3px solid $primary-color;
+    }
+    .tabs-title {
+      margin-right: 3rem;
+    }
+  }
+  .tabs-content {
+    border: none;
+    .tabs-panel {
+      padding-left: 0;
+      padding-right: 0;
+      font-family: "Rambla", sans-serif;
+      font-size: 20px;
+      line-height: 1.7;
+    }
+  }
+}

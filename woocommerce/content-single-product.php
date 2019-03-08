@@ -43,7 +43,7 @@ if ( post_password_required() ) {
 			do_action( 'woocommerce_before_single_product_summary' );
 			?>
         </div>
-        <div class="large-5 medium-5 small-12">
+        <div class="large-5 medium-5 small-12 leftrempad-2">
             <div class="summary entry-summary">
 				<?php
 				/**

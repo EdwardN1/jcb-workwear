@@ -22,6 +22,7 @@ jQuery(document).ready(function ($) {
                 and the selected item:*/
                 var y, i, k, s, h;
                 s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+  //              window.console.log(s.options[s.selectedIndex].value);
                 h = this.parentNode.previousSibling;
                 for (i = 0; i < s.length; i++) {
                     if (s.options[i].innerHTML == this.innerHTML) {
@@ -34,6 +35,20 @@ jQuery(document).ready(function ($) {
                         this.setAttribute("class", "same-as-selected");
                         break;
                     }
+                }
+//                window.console.log(s.options[s.selectedIndex].value);
+                if(s.options[s.selectedIndex].value != '') {
+                    var canEnable = true;
+                    $('select').each(function () {
+                        if ($(this).val() == '') {
+                            //window.console.log($(this).val())
+                           canEnable = false;
+                        }
+                    });
+                    if(canEnable) {
+                        $('button.single_add_to_cart_button').removeClass('disabled');
+                    }
+
                 }
                 h.click();
             });

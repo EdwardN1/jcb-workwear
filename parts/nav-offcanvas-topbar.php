@@ -8,10 +8,17 @@
 
 <div class="top-bar dark-grey-background" id="top-bar-menu">
 
-    <div class="show-for-medium dark-grey-background white heebo ExtraBold fontsize-22 caps addtolinks spaceevenly" style="width: 100%;">
-        <div class="grid-container leftpad-0 rightpad-0">
-			<?php joints_top_nav(); ?>
-        </div>
+    <div class="show-for-medium dark-grey-background white heebo ExtraBold fontsize-22 caps addtolinks spaceevenly"
+         style="width: 100%;">
+		<?php if ( is_front_page() ): ?>
+            <div class="grid-container leftpad-0 rightpad-0">
+				<?php joints_top_nav(); ?>
+            </div>
+		<?php else: ?>
+            <div class="grid-container">
+				<?php joints_top_nav(); ?>
+            </div>
+		<?php endif; ?>
     </div>
     <div class="top-bar-right float-right show-for-small-only">
         <ul class="menu dark-grey-background">
