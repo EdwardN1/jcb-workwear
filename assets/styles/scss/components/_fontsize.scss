@@ -8,3 +8,68 @@
     }
   }
 }
+
+@for $i from 1 through 200 {
+  .fontsize-small-#{$i} {
+    @include breakpoint(small) {
+      font-size: #{$i}px;
+      &.addtolinks {
+        a {
+          font-size: #{$i}px;
+        }
+      }
+    }
+  }
+}
+
+@for $i from 1 through 200 {
+  .fontsize-medium-#{$i} {
+    @include breakpoint(medium) {
+      font-size: #{$i}px;
+      &.addtolinks {
+        a {
+          font-size: #{$i}px;
+        }
+      }
+    }
+  }
+}
+
+@for $i from 1 through 200 {
+  .fontsize-large-#{$i} {
+    @include breakpoint(large) {
+      font-size: #{$i}px;
+      &.addtolinks {
+        a {
+          font-size: #{$i}px;
+        }
+      }
+    }
+  }
+}
+
+@for $i from 1 through 200 {
+  .fontsize-xlarge-#{$i} {
+    @include breakpoint(xlarge) {
+      font-size: #{$i}px;
+      &.addtolinks {
+        a {
+          font-size: #{$i}px;
+        }
+      }
+    }
+  }
+}
+
+@for $i from 1 through 200 {
+  .fontsize-xxlarge-#{$i} {
+    @include breakpoint(xxlarge) {
+      font-size: #{$i}px;
+      &.addtolinks {
+        a {
+          font-size: #{$i}px;
+        }
+      }
+    }
+  }
+}

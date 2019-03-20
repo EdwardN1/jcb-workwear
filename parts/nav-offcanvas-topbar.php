@@ -8,7 +8,7 @@
 
 <div class="top-bar dark-grey-background" id="top-bar-menu">
 
-    <div class="show-for-medium dark-grey-background white heebo ExtraBold fontsize-22 caps addtolinks spaceevenly"
+    <div class="show-for-large dark-grey-background white heebo ExtraBold fontsize-xxlarge-22 fontsize-xlarge-20 fontsize-medium-16 caps addtolinks spaceevenly"
          style="width: 100%;">
 		<?php if ( is_front_page() ): ?>
             <div class="grid-container leftpad-0 rightpad-0">
@@ -20,10 +20,13 @@
             </div>
 		<?php endif; ?>
     </div>
-    <div class="top-bar-right float-right show-for-small-only">
+    <div class="top-bar-right float-right hide-for-large">
         <ul class="menu dark-grey-background">
             <!-- <li><button class="menu-icon" type="button" data-toggle="off-canvas"></button></li> -->
-            <li><a data-toggle="off-canvas"><?php _e( 'Menu', 'jointswp' ); ?></a></li>
+            <!--<li><a><?php /*_e( 'Menu', 'jointswp' ); */?></a>-->
+                <a data-toggle="off-canvas" class="burger-icon"><span class="menu-icon-bar"></span><span class="menu-icon-bar"></span><span class="menu-icon-bar"></span></a>
+
+            </li>
         </ul>
     </div>
 </div>

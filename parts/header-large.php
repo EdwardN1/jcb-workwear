@@ -13,8 +13,8 @@
                 <div class="grid-x toppad-7">
                     <div class="large-10 medium-10 small-10 heebo heading ExtraBold caps white cell fontsize-24">call us
                         on <?php the_field( 'telephone_number', 'option' ); ?></div>
-                    <div class="large-2 medium-2 small-2 heebo heading ExtraBold small caps orange text-right cell"><span
-                                class="cart-icon">2</span></div>
+                    <div class="large-2 medium-2 small-2 heebo heading ExtraBold small caps orange text-right cell"><a href="/cart/"><span
+                                class="cart-icon"><?php echo WC()->cart->get_cart_contents_count(); ?></span></a></div>
                 </div>
                 <div class="grid-container full toprempad-1">
                     <div class="grid-x">

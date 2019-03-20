@@ -1,0 +1,35 @@
+$icon-size: 3rem;
+
+a {
+  &.burger-icon {
+    background: {
+      color: $white;
+    }
+    border: {
+      color: $primary-color;
+      width: 1px;
+      style: solid;
+    }
+    display: block;
+    height: $icon-size !important;
+    padding: $icon-size * .1 !important;
+    margin: 0 !important;
+    width: $icon-size !important;
+    @include border-radius($icon-size * .05 );
+    .menu-icon-bar {
+      background: {
+        color: $primary-color;
+      }
+      display: block;
+      height: $icon-size * .2;
+      margin: {
+        left: 0;
+        right: 0;
+        bottom: $icon-size * .1;
+      }
+      @include border-radius($icon-size *.1);
+      padding: 0;
+      width: 100%;
+    }
+  }
+}
