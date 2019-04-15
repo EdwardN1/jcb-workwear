@@ -1,0 +1,114 @@
+.blog {
+  .main {
+    .blog-background:first-of-type {
+      padding-top: 12px;
+    }
+    .blog-background:last-of-type {
+      padding-bottom: 52px;
+    }
+    @include breakpoint(medium) {
+      .blog-background:first-of-type {
+        padding-top: 24px;
+      }
+      .blog-background:last-of-type {
+        padding-bottom: 34px;
+      }
+    }
+    @include breakpoint(large) {
+      .blog-background:last-of-type {
+        padding-bottom: 24px;
+      }
+    }
+  }
+}
+
+.blog-footer {
+  padding-top: 46px;
+  padding-bottom: 24px;
+}
+
+.blog-background {
+  position: relative;
+  padding-bottom: 40px;
+  @include breakpoint(medium) {
+    padding-bottom: 10px;
+  }
+  @include breakpoint(large) {
+    padding-bottom: 0;
+  }
+  .social {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+  }
+  .img {
+    min-height: 310px;
+    min-width: 250px;
+    height: 100%;
+    width: 100%;
+    display: block;
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+  .featured-image {
+    padding: 30px;
+    display: none;
+    padding-left: 0;
+    @include breakpoint(medium) {
+      display: block;
+    }
+    @include breakpoint(large) {
+      padding-left: 30px;
+    }
+  }
+  .excerpt-details {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    @include breakpoint(medium) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      padding-right: 15px;
+      padding-left: 0;
+    }
+  }
+  .entry-content {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    @include breakpoint(medium) {
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+  a.body-colour.quoted {
+    color: $black;
+    text-transform: uppercase;
+    font-size: 26px;
+    line-height: 1;
+    display: block;
+    @include breakpoint(medium) {
+      font-size: 30px;
+    }
+    @include breakpoint(large) {
+      font-size: 55px;
+    }
+  }
+  p {
+    font-size: 16px;
+    @include breakpoint(large) {
+      font-size: 24px;
+    }
+  }
+  .byline {
+    font-size: 18px;
+    @include breakpoint(medium) {
+      font-size: 24px;
+    }
+    @include breakpoint(large) {
+      font-size: 30px;
+    }
+  }
+}
