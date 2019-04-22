@@ -18,22 +18,27 @@
                 </div>
                 <div class="grid-container full toprempad-1">
                     <div class="grid-x">
-                        <div class="large-8 small-8 medium-8 cell leftpad-8">
+                        <div class="large-7 small-7 medium-7 cell leftpad-8">
                             <?php get_search_form(); ?>
                         </div>
-                        <div class="social large-4 medium-4 small-4 cell">
+                        <div class="social large-5 medium-5 small-5 cell">
                             <div class="grid-x">
-                                <div class="large-4 small-4 medium-4 cell text-right">
+                                <div class="large-3 small-3 medium-3 cell text-right">
+                                    <a href="<?php the_field( 'blog_link', 'option' ); ?>"
+                                       target="_blank"><img
+                                                src="<?php echo get_template_directory_uri(); ?>/assets/images/blog.png"></a>
+                                </div>
+                                <div class="large-3 small-3 medium-3 cell text-right">
                                     <a href="<?php the_field( 'facebook_link', 'option' ); ?>"
                                        target="_blank"><img
                                                 src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook.png"></a>
                                 </div>
-                                <div class="large-4 small-4 medium-4 cell text-right">
+                                <div class="large-3 small-3 medium-3 cell text-right">
                                     <a href="<?php the_field( 'twitter_link', 'option' ); ?>"
                                        target="_blank"><img
                                                 src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter.png"></a>
                                 </div>
-                                <div class="large-4 small-4 medium-4 cell text-right">
+                                <div class="large-3 small-3 medium-3 cell text-right">
                                     <a href="<?php the_field( 'instagram_link', 'option' ); ?>" target="_blank"><img
                                                 src="<?php echo get_template_directory_uri(); ?>/assets/images/Instagram.png"></a>
                                 </div>

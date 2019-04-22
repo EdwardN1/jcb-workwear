@@ -53,5 +53,13 @@
 			<?php get_template_part( 'parts/nav', 'offcanvas-topbar' ); ?>
 
             <div class="orange-background text-center heebo ExtraBold fontsize-22 caps black toppad-3"><?php the_field('top_banner_message','option');?></div>
+            <div id="stay-updated-form" class="reveal black-background white" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+               <?php gravity_form(1, true, false, false, '', true, 12);?>
+                <button class="close-button" data-close aria-label="Close modal" type="button">
+
+                    <span aria-hidden="true">&times;</span>
+
+                </button>
+            </div>
 
         </header> <!-- end .header -->

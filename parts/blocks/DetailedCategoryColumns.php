@@ -53,22 +53,7 @@
 
 <div class="detailed-categories grid-container leftpad-0 rightpad-0 toppad-20">
     <div class="grid-x">
-        <div class="large-3 medium-3 small-12 cell side-bar">
-            <div class="top-link">
-                <a href="<?php echo $top_link; ?>">
-					<?php if ( $top_image ) { ?>
-                        <img src="<?php echo $top_imageURL; ?>" alt="<?php echo $top_imageALT; ?>"/>
-					<?php } ?>
-                </a>
-            </div>
-            <div class="bottom-link">
-                <a href="<?php echo $bottom_link; ?>">
-					<?php if ( $bottom_image ) { ?>
-                        <img src="<?php echo $bottom_imageURL; ?>" alt="<?php echo $bottom_imageALT; ?>"/>
-					<?php } ?>
-                </a>
-            </div>
-        </div>
+
 
         <div class="large-9 medium-9 small-12">
             <div class="grid-x">
@@ -138,6 +123,23 @@
 						<?php echo $below_content; ?>
                     </div>
 				<?php endif; ?>
+            </div>
+        </div>
+
+        <div class="large-3 medium-3 small-12 cell side-bar">
+            <div class="top-link">
+                <a href="<?php echo $top_link; ?>">
+                    <?php if ( $top_image ) { ?>
+                        <img src="<?php echo $top_imageURL; ?>" alt="<?php echo $top_imageALT; ?>"/>
+                    <?php } ?>
+                </a>
+            </div>
+            <div class="bottom-link">
+                <a href="<?php echo $bottom_link; ?>">
+                    <?php if ( $bottom_image ) { ?>
+                        <img src="<?php echo $bottom_imageURL; ?>" alt="<?php echo $bottom_imageALT; ?>"/>
+                    <?php } ?>
+                </a>
             </div>
         </div>
 

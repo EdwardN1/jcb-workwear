@@ -48,4 +48,7 @@
     background: none;
     outline: 1px solid $primary-color;
   }
+  .menu >li a:hover {
+    outline: 1px solid $primary-color;
+  }
 }

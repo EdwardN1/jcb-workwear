@@ -85,3 +85,21 @@ if ( have_rows( 'product_tabs', $product->get_id() ) ):
 	endif;
 	?>
 </div>
+<?php
+$wcTagTerms = get_the_terms( get_the_ID(), 'product_tag' );
+if ( $wcTagTerms && ! is_wp_error( $wcTagTerms ) ) :
+
+    $tagCells = array();
+
+    foreach ( $wcTagTerms as $term ) {
+        $image = get_field('image',$term);
+        $tagCells[] = '<div class="cell shrink"><img alt="'.$term->name.'" src="'.$image['url'].'" style="margin-right: 12px;"/></div>';
+    }
+
+    $on_draught = implode( "", $tagCells );
+    ?>
+
+    <div class="grid-x grid-padding-y">
+        <?php echo $on_draught; ?>
+    </div>
+<?php endif; ?>

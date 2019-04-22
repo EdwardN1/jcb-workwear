@@ -8,6 +8,16 @@
 
 .orange-background {
   background-color: $primary-color;
+  color: $black;
+  a {
+    color: $black;
+    &:hover {
+      color: $black;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
 }
 
 .light-grey-background {
