@@ -10,8 +10,8 @@
     padding-right: 1em;
     position: relative;
     a {
-      padding-left: 0;
-      padding-right: 0;
+      padding-left: 5px;
+      padding-right: 5px;
     }
     &:after {
       content: "|";
@@ -40,5 +40,11 @@
     a {
       padding-left: 0;
     }
+  }
+  &.menu .active>a, &.menu .is-active>a {
+    background: none;
+    outline: 1px solid $primary-color;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }
