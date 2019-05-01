@@ -22,4 +22,14 @@
 
 .light-grey-background {
   background-color: $light-gray;
+  a {
+    color: $black;
+    &:hover {
+      color: $black;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+
 }

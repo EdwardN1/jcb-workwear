@@ -47,8 +47,14 @@ if ( !is_front_page() && is_home() ) {
 			} ?>
             <div class="slider-container"<?php echo $slidestyle; ?>>
 				<?php $description = get_sub_field( 'description' ); ?>
+                <?php $align_right = get_sub_field( 'align_right' ); ?>
+                <?php $rClass = '';
+                if($align_right) {
+                    $rClass=' right';
+                }
+                ?>
                 <div class="slide-description">
-                    <div class="slide-shader white"> <?php echo $description; ?></div>
+                    <div class="slide-shader white<?php echo $rClass; ?>"> <?php echo $description; ?></div>
                 </div>
             </div>
 			<?php if ( get_sub_field( 'add_link' ) == 1 ) {

@@ -16,7 +16,7 @@
                 <div class="cell large-4 medium-6 small-12 white-background featured-image"><a
                             href="<?php the_permalink() ?>"
                             class="body-colour img"
-                            style="background: url(<?php the_post_thumbnail_url('full'); ?>) no-repeat; background-size: cover;">&nbsp;</a>
+                            style="background: url(<?php the_post_thumbnail_url('full'); ?>) no-repeat; background-size: contain;">&nbsp;</a>
                 </div>
                 <?php
             } else {
@@ -54,3 +54,5 @@
 
     </div>
 </div>
+
+

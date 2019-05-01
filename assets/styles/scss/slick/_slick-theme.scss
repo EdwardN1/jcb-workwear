@@ -204,14 +204,20 @@ $slick-opacity-not-active: 0.25 !default;
         margin-left: 0;
         height: 210px;
         padding-top: 8%;
+        position: relative;
         .slide-shader {
-            display: inline-block;
-            height: 210px;
+            display: block;
+            position: absolute;
+            min-height: 210px;
             background-color: rgba(0,0,0,0.6);
             width: auto;
             padding-top: 2em;
+            padding-bottom: 1em;
             padding-left: 1em;
             padding-right: 1em;
+            &.right {
+                right: 0;
+            }
             h3 {
                 font-family: "Heebo", sans-serif;
                 text-transform: uppercase;
@@ -222,13 +228,16 @@ $slick-opacity-not-active: 0.25 !default;
             h1, h2 {
                 font-family: "Heebo", sans-serif;
                 font-weight: 800;
-                font-size: 65px;
-                line-height: 1.1;
+                font-size: 55px;
+                line-height: 1;
+                margin-bottom: 1rem;
+                text-transform: uppercase;
             }
             p {
                 font-family: "Rambla", sans-serif;
-                font-size: 20px;
+                font-size: 26px;
                 line-height: 22px;
+                text-transform: uppercase;
             }
         }
     }
