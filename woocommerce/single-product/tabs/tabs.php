@@ -119,7 +119,8 @@ if ($wcTagTerms && !is_wp_error($wcTagTerms)) :
 
     foreach ($wcTagTerms as $term) {
         $image = get_field('image', $term);
-        $tagCells[] = '<div class="cell shrink"><img alt="' . $term->name . '" src="' . $image['url'] . '" style="margin-right: 12px;"/></div>';
+        $title = strtoupper($term->name).'&nbsp;: &nbsp;&nbsp;'.$term->description;
+        $tagCells[] = '<div class="cell shrink"><img data-tooltip title="'.$title.'" class="top" data-click-open="true" alt="' . $term->name . '" src="' . $image['url'] . '" style="margin-right: 12px; border: none;"/></div>';
     }
 
     $on_draught = implode("", $tagCells);
