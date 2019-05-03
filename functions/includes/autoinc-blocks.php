@@ -39,7 +39,7 @@ function acfgbc_ImageSlider() {
 		'description'     => __( 'Image Slider' ),
 		'render_callback' => 'acfgbc_ImageSlider_rc',
 		'category'        => 'jcbworkwear',
-		'icon'            => 'tagcloud',
+		'icon'            => 'images-alt2',
 		'mode'            => 'preview',
 		'supports'        => array( 'align' => false, 'multiple' => true, ),
 		'keywords'        => array( 'Row', 'Common' ),
@@ -78,4 +78,50 @@ function acfgbc_DetailedCategoryColumns_rc( $block, $content = '', $is_preview =
 		include_once get_template_directory().'/parts/blocks/editor/styles.php';
 	}
 	include get_template_directory(). '/parts/blocks/DetailedCategoryColumns.php';
+}
+add_action( 'acf/init', 'acfgbc_HeadingwithSocialSharing' );
+function acfgbc_HeadingwithSocialSharing() {
+    if ( ! function_exists( 'acf_register_block' ) ) {
+        return;
+    }
+    acf_register_block( array(
+        'name'            => 'acfgbcHeadingwithSocialSharing',
+        'title'           => __( 'Heading with Social Sharing' ),
+        'description'     => __( 'Heading with Social Sharing' ),
+        'render_callback' => 'acfgbc_HeadingwithSocialSharing_rc',
+        'category'        => 'jcbworkwear',
+        'icon'            => 'share',
+        'mode'            => 'preview',
+        'supports'        => array( 'align' => false, 'multiple' => true, ),
+        'keywords'        => array( 'Row', 'Common' ),
+    ) );
+}
+function acfgbc_HeadingwithSocialSharing_rc( $block, $content = '', $is_preview = false ) {
+    if ($is_preview) {
+        include_once get_template_directory().'/parts/blocks/editor/styles.php';
+    }
+    include get_template_directory(). '/parts/blocks/HeadingwithSocialSharing.php';
+}
+add_action( 'acf/init', 'acfgbc_ImageList' );
+function acfgbc_ImageList() {
+    if ( ! function_exists( 'acf_register_block' ) ) {
+        return;
+    }
+    acf_register_block( array(
+        'name'            => 'acfgbcImageList',
+        'title'           => __( 'Image List' ),
+        'description'     => __( 'Image List' ),
+        'render_callback' => 'acfgbc_ImageList_rc',
+        'category'        => 'jcbworkwear',
+        'icon'            => 'list-view',
+        'mode'            => 'preview',
+        'supports'        => array( 'align' => false, 'multiple' => true, ),
+        'keywords'        => array( 'Row', 'Common' ),
+    ) );
+}
+function acfgbc_ImageList_rc( $block, $content = '', $is_preview = false ) {
+    if ($is_preview) {
+        include_once get_template_directory().'/parts/blocks/editor/styles.php';
+    }
+    include get_template_directory(). '/parts/blocks/ImageList.php';
 }

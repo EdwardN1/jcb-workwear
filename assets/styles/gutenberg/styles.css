@@ -1,0 +1,36 @@
+.slick-button {
+    font-size: 40px;
+    /*width: auto;*/
+    /*height: 3em;*/
+}
+.slick-button:after {
+    /*height: 3em;*/
+}
+@media screen and ( min-width: 768px ) {
+    .edit-post-visual-editor .editor-post-title,
+    .edit-post-visual-editor .editor-block-list__block {
+        max-width:	1260px;
+    }
+}
+
+.grid-container {
+    max-width: 1260px;
+}
+
+ul li {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+ul {
+    padding-bottom: 1em;
+}
+
+.editor-styles-wrapper ul li {
+    font-size: 16px;
+    line-height: 1.5 !important;
+}
+
+.editor-styles-wrapper ul {
+    padding-bottom: 1em !important;
+}
