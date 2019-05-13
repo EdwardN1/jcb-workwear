@@ -42,7 +42,7 @@ if ($productShortDescription != '') {
     if ($tabCount == 1) {
         $tabsHeadings .= '<li class="tabs-title is-active"><a href="#panel' . $tabCount . '" aria-selected="true"><p>' . get_field('epim_short_description_tab_heading', 'option') . '</p></a></li>';
     } else {
-        $tabsHeadings .= '<li class="tabs-title"><a href="#panel' . $tabCount . '"><p>Short Description from ePim</p></a></li>';
+        $tabsHeadings .= '<li class="tabs-title"><a href="#panel' . $tabCount . '"><p>' . get_field('epim_short_description_tab_heading', 'option') . '</p></a></li>';
     }
     if ($tabCount == 1) {
         $tabsSections .= '<div class="tabs-panel is-active" id="panel' . $tabCount . '">';

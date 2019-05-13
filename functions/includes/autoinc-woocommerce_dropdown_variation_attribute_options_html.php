@@ -67,7 +67,7 @@ function jcb_variation_types( $html, $args ) {
 			        $this_style_class = 'clicker-'.$attribute.'-'.$term->slug;
 			        $styles .= '.variation-radios label span.'.$this_style_class.':before {'.'background-color: '.$color_picker.'} ';
 				    if(in_array($term->slug, $options, true)) {
-					    $radios .= '<label><input type="radio" name="'.esc_attr($name).'" value="'.esc_attr($term->slug).'" '.checked(sanitize_title($args['selected']), $term->slug, false).'><span class="'.$this_style_class.'">'.esc_html(apply_filters('woocommerce_variation_option_name', $term->name)).'</span></label>';
+					    $radios .= '<label><input type="radio" data-imageID="1" name="'.esc_attr($name).'" value="'.esc_attr($term->slug).'" '.checked(sanitize_title($args['selected']), $term->slug, false).'><span class="'.$this_style_class.'">'.esc_html(apply_filters('woocommerce_variation_option_name', $term->name)).'</span></label>';
 				    }
 			    }
 		    } else {
