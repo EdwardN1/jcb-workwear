@@ -1,0 +1,17 @@
+#top-message-banner {
+  a {
+    font-size: 16px;
+    line-height: 1.2;
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    display: block;
+    @include breakpoint(large) {
+      padding: 0;
+      font-size: 22px;
+      line-height: inherit;
+    }
+
+  }
+}

@@ -7,13 +7,13 @@
  	
 get_header(); ?>
 			
-	<div class="content grid-container">
+	<div class="content grid-container search-results">
 
 		<div class="inner-content">
 	
 			<main class="main small-12 medium-12 large-12 cell" role="main">
 				<header>
-					<h1 class="archive-title"><?php _e( 'Search Results for:', 'jointswp' ); ?> <?php echo esc_attr(get_search_query()); ?></h1>
+					<h1 class="archive-title" style="padding-top: 1em;"><?php _e( 'Search Results for:', 'jointswp' ); ?> <?php echo esc_attr(get_search_query()); ?></h1>
 				</header>
 
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>

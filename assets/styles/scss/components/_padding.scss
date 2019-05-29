@@ -20,6 +20,12 @@
   }
   .leftrempad-#{$i} {
     padding-left: #{$i}rem;
+    &.small-12 {
+      padding-left: 0;
+      @include breakpoint(medium) {
+        padding-left: #{$i}rem;
+      }
+    }
   }
   .rightrempad-#{$i} {
     padding-right: #{$i}rem;

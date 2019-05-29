@@ -12,7 +12,7 @@
                 <?php $imageURL = $image['url']; ?>
                 <?php $imageALT = $image['alt']; ?>
                 <?php $description = get_sub_field('description'); ?>
-                <div class="cell large-2 medium-6 small-1">
+                <div class="cell large-2 medium-4 small-6">
                     <div class="image" style="background-image: url(<?php echo $imageURL; ?>)"></div>
                     <div class="description"><?php echo $description; ?></div>
                 </div>

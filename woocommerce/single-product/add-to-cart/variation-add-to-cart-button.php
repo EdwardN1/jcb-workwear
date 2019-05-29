@@ -17,8 +17,7 @@ if ($sizeguide) {
         <ul class="accordion size-guide" data-accordion data-allow-all-closed="true">
             <li class="accordion-item" data-accordion-item>
                 <!-- Accordion tab title -->
-                <a href="#" class="accordion-title"
-                   style="border: none; background-color: #f2f2f2; font-size: 15px; color: #666666;">
+                <a href="#" class="accordion-title">
                     <?php the_field('guide_description', $sizeguide->ID); ?>
                 </a>
 
@@ -120,8 +119,11 @@ if ($sizeguide) {
 $add_a_logo_option = get_field('add_a_logo_option' , $product->get_id());
 if ($add_a_logo_option) {
     ?>
-    <div class="add-a-logo toppad-16">
-        <img src="<?php echo get_template_directory_uri().'/assets/images/add-your-logo.png'; ?>" class="float-center">
+    <div class="add-a-logo toppad-16 text-center">
+        <!--<img src="<?php /*echo get_template_directory_uri().'/assets/images/add-your-logo.png'; */?>">-->
+        <a href="/customise-your-workwear/">WANT TO CUSTOMISE THIS ITEM?<br>
+            Let us show you how >></a>
+
     </div>
     <?php
 }

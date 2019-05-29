@@ -200,21 +200,47 @@ $slick-opacity-not-active: 0.25 !default;
 .slider-container {
     max-height: 400px;
     height: 39.024vw;
+    position: relative;
     .slide-description {
         margin-left: 0;
         height: 210px;
         padding-top: 8%;
-        position: relative;
+        @include breakpoint(720) {
+            position: relative;
+        }
         .slide-shader {
             display: block;
             position: absolute;
-            min-height: 210px;
+            min-height: 120px;
             background-color: rgba(0,0,0,0.6);
             width: auto;
-            padding-top: 2em;
-            padding-bottom: 1em;
+            padding-top: 1em;
+            padding-bottom: 0.5em;
             padding-left: 1em;
             padding-right: 1em;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            img {
+                max-height: 100px;
+                width: auto;
+                @include breakpoint(medium) {
+                    max-height: inherit;
+                    width: inherit;
+                }
+            }
+            @include breakpoint(480) {
+                top: inherit;
+                left: inherit;
+                right: inherit;
+            }
+            @include breakpoint(720) {
+                padding-top: 2em;
+                padding-bottom: 1em;
+                min-height: 210px;
+                bottom: inherit;
+            }
             &.right {
                 right: 0;
             }
@@ -228,18 +254,31 @@ $slick-opacity-not-active: 0.25 !default;
             h1, h2 {
                 font-family: "Heebo", sans-serif;
                 font-weight: 800;
-                font-size: 55px;
+                font-size: 22px;
                 line-height: 1;
-                margin-bottom: 1rem;
+                margin-bottom: 0.5rem;
                 text-transform: uppercase;
+                @include breakpoint(480) {
+                    font-size: 26px;
+                }
+                @include breakpoint(720) {
+                    font-size: 55px;
+                    margin-bottom: 1rem;
+                }
             }
             p {
                 font-family: "Rambla", sans-serif;
-                font-size: 26px;
+                font-size: 18px;
                 line-height: 22px;
+                margin-bottom: 0.5rem;
                 //text-transform: uppercase;
-
-
+                @include breakpoint(480) {
+                    font-size: 22px;
+                }
+                @include breakpoint(720) {
+                    font-size: 28px;
+                    margin-bottom: 1rem;
+                }
             }
         }
     }

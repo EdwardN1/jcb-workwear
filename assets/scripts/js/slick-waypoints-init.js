@@ -7,8 +7,8 @@ jQuery(document).ready(function ($) {
         var wpClass = $element.data('waypoint-class');
 
         $element.waypoint(function (direction) {
-            if(direction==wpDirection) {
-                if(!$element.hasClass(wpClass)) {
+            if (direction == wpDirection) {
+                if (!$element.hasClass(wpClass)) {
                     $element.addClass(wpClass);
                 }
             }
@@ -21,10 +21,10 @@ jQuery(document).ready(function ($) {
     $('[data-slick-slider]').slick();
 
     $('[data-slick-slider-main]').slick({
-        slidesToShow:1,
-        slidesToScroll:1,
-        infinite:true,
-        initialSlide:0,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        initialSlide: 0,
         asNavFor: "#product-slider-nav",
     });
 
@@ -35,6 +35,37 @@ jQuery(document).ready(function ($) {
         asNavFor: "#product-slider-main",
         /*centerMode: true,*/
         focusOnSelect: true,
+        responsive: [
+            {
+                breakpoint: 1250,
+                settings: {
+                    slidesToShow: 4
+                }
+            }
+            , {
+                breakpoint: 980,
+                settings: {
+                    slidesToShow: 3
+                }
+            }
+            , {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 4
+                }
+            }
+            , {
+                breakpoint: 580,
+                settings: {
+                    slidesToShow: 3
+                }
+            }
+            , {
+                breakpoint: 320,
+                settings: {
+                    slidesToShow: 1
+                }
+            }]
     });
 
 });

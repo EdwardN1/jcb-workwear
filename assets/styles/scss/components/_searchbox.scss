@@ -4,9 +4,15 @@
   display: inline-block;
   vertical-align: middle;
   margin: 0;
+  width: 160px;
+  @include breakpoint(medium) {
+    width: 170px;
+  }
   @include breakpoint(xlarge) {
-    min-width: 233px;
-
+    min-width: 200px;
+  }
+  @include breakpoint(xlarge) {
+    min-width: 230px;
   }
 }
 
@@ -17,4 +23,10 @@
   vertical-align: middle;
   margin: 0;
   padding: 0;
+}
+
+.search-results {
+  .byline {
+    display: none;
+  }
 }

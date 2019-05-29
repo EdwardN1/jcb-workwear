@@ -1,0 +1,28 @@
+#off-canvas {
+  background-color: $black;
+  color: $white;
+  text-transform: uppercase;
+  a {
+    color: $white;
+    text-transform: uppercase;
+    outline: none;
+    &:focus {
+      outline: none !important;
+    }
+  }
+  .searchbox {
+    max-width: 160px;
+  }
+  #main-nav {
+    li, li a {
+      outline: none;
+      color: $white;
+      text-transform: uppercase;
+      width: 100%;
+      display: block;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

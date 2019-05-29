@@ -1,0 +1,38 @@
+.woocommerce {
+  .woocommerce-pagination {
+    margin-top: 1em;
+    width: 50%;
+    float: left;
+    text-align: left !important;
+
+    .page-numbers {
+      margin-left: 0;
+      .current, li a:hover {
+        padding: 3px 7px !important;
+        background: #DDD !important;
+        border: 1px solid #BBB !important;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+      }
+
+      a:link, a:visited {
+        display: inline !important;
+        text-decoration: none !important;
+        background: #EEE !important;
+        color: #666 !important;
+        padding: 3px 7px !important;
+        border: 1px solid #DDD !important;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+      }
+
+      li {
+        display: inline;
+        margin: 2px;
+
+      }
+    }
+  }
+}

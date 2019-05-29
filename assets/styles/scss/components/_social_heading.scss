@@ -1,9 +1,12 @@
 .social-heading {
   position: relative;
   width: 100%;
+  min-height: 46px;
   .social {
-    position: absolute;
-    right: 0;
-    top: 0;
+    @include breakpoint(medium) {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
   }
 }

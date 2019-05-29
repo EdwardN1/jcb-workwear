@@ -4,20 +4,40 @@
   padding: 0;
   li {
     list-style-type: none;
-    display: inline-block;
-    width: auto;
-    padding-left: 1em;
+    display: block;
+    width: 100%;
+    padding-left: 0;
     padding-right: 1em;
     position: relative;
+    @include breakpoint(medium) {
+      display: inline-block;
+      width: auto;
+      padding-left: 1em;
+      padding-right: 1em;
+    }
     a {
-      padding-left: 5px;
-      padding-right: 5px;
+      font-size: 16px;
+      padding-left: 0;
+      padding-right: 0;
+      text-align: center;
+      @include breakpoint(medium) {
+        font-size: 18px;
+        text-align: left;
+      }
+      @include breakpoint(large) {
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 20px;
+      }
     }
     &:after {
-      content: "|";
+      content: " ";
       position: absolute;
       top: 0.4em;
       right: 0;
+      @include breakpoint(medium) {
+        content: "|";
+      }
     }
 
     ul {

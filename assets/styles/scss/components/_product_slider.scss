@@ -2,7 +2,8 @@
   width: 100%;
   padding-top: 100%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-position: center;
   max-height: 610px;
   border: 1px solid #e8e8e8;
   @include breakpoint(medium) {
@@ -31,6 +32,7 @@
     width: 116px;
     height: 112px;
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     border: 1px solid #e8e8e8;
     cursor: pointer;

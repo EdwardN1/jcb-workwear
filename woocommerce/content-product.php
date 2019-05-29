@@ -24,7 +24,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<div <?php wc_product_class('cell large-3 medium-4 small-12'); ?>>
+<div <?php wc_product_class('cell large-3 medium-4 small-12 loop-product'); ?>>
 	<?php
 	/**
 	 * Hook: woocommerce_before_shop_loop_item.

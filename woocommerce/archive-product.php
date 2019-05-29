@@ -49,6 +49,7 @@ get_header( 'shop' );
             <div class="large-6 medium-6 small-12 category-detail">
 				<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
                     <h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
+
 				<?php endif; ?>
 
 				<?php

@@ -1,0 +1,25 @@
+.add-a-logo {
+  padding-left: 70px;
+  a {
+    display: block;
+    padding-top: 1.3em;
+    padding-bottom: 1.3em;
+    font-size: 20px;
+    color: #666666;
+    background-color: #f2f2f2;
+    position: relative;
+    &:before {
+      content: " ";
+      position: absolute;
+      width: 112px;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      left: -70px;
+      background-image: url("../images/add-your-logo-solid.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}
