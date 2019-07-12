@@ -1,8 +1,10 @@
 .category-archive {
   .category-image {
     img {
-      height: 100%;
-      width: auto;
+      @include breakpoint(xlarge) {
+        height: 100%;
+        width: auto;
+      }
     }
   }
   .category-detail {
@@ -13,8 +15,16 @@
       font-family: "Heebo", sans-serif;
       text-transform: uppercase;
       font-weight: 900;
-      font-size: 60px;
+      font-size: 40px;
       line-height: 1;
+      padding-top: 16px;
+      @include breakpoint(medium) {
+        padding-top: 0;
+      }
+      @include breakpoint(large) {
+        font-size: 60px;
+
+      }
     }
   }
 

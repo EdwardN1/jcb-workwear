@@ -24,6 +24,15 @@ global $product;
 ?>
 <div style="padding-bottom: 1em;">
 <?php if ( $price_html = $product->get_price_html() ) : ?>
+    <?php
+//error_log($product->get_name().' - '.$product->get_tax_status());
+    if (strpos($price_html, 'inc VAT') == false) {
+
+    }
+    $tax_status = $product->get_tax_status();
+    if($tax_status=='none')
+        $price_html .= ' zero rated';
+    ?>
 	<span class="price"><?php echo $price_html; ?></span>
     <?php
 else:?>

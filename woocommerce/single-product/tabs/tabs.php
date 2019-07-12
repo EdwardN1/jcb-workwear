@@ -26,7 +26,8 @@ $tabCount = 0;
 $tabsHeadings = '';
 $tabsSections = '';
 $productDescription = $product->get_description();
-$productShortDescription = $product->get_short_description();
+//$productShortDescription = $product->get_short_description();
+$productShortDescription = '';
 
 if ($productDescription != '') {
     $tabCount++;

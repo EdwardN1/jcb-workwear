@@ -36,7 +36,7 @@ jQuery(document).ready(function ($) {
                         break;
                     }
                 }
-//                window.console.log(s.options[s.selectedIndex].value);
+                window.console.log(s.options[s.selectedIndex].value);
                 if(s.options[s.selectedIndex].value != '') {
                     var canEnable = true;
                     $('select').each(function () {

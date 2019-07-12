@@ -84,7 +84,7 @@ function jcb_variation_types( $html, $args ) {
 
 	    //$html = '<div>'.$html.'</div>'.$styles.$radios;
 	    $html = '<div style="display: none;">'.$html.'</div>'.$styles.$radios;
-    } else {
+    } /*else {
 
 	    $html = '<div class="custom-select"><select id="' . esc_attr( $id ) . '" class="' . esc_attr( $class ) . '" name="' . esc_attr( $name ) . '" data-attribute_name="attribute_' . esc_attr( sanitize_title( $attribute ) ) . '" data-show_option_none="' . ( $show_option_none ? 'yes' : 'no' ) . '">';
 
@@ -118,7 +118,7 @@ function jcb_variation_types( $html, $args ) {
 	    }
 
 	    $html .= '</select></div>';
-    }
+    }*/
      return $html;
 }
 

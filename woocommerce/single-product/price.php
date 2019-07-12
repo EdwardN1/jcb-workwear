@@ -23,11 +23,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $product;
 
 
-if ($product->get_tax_class()=='zero-rate') {
+if ($product->get_tax_status()=='none') {
 	?>
 
     <p class="price small-pound heebo fontsize-50 heading heavy"
-       style="line-height: 2;">£<?php echo $product->get_price(); ?></p>
+       style="line-height: 2;">£<?php echo $product->get_price(); ?> <span style="font-size: 18px; font-weight: normal;">zero rated for VAT</span></p>
 
 	<?php
 } else {

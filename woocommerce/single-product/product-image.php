@@ -21,9 +21,10 @@ global $product;
 
 function whatever($array, $key, $val)
 {
-    foreach ($array as $item)
+    if($array) {foreach ($array as $item)
         if (isset($item[$key]) && $item[$key] == $val)
-            return true;
+            return true;}
+
     return false;
 }
 

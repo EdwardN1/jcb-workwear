@@ -9,6 +9,8 @@
   max-width: 650px;
   padding-top: 3px;
   text-align: center;
+
+  //margin-top: 2em;
 }
 
 .custom-select select {
@@ -69,6 +71,11 @@
 /*hide the items when the select box is closed:*/
 .select-hide {
   display: none;
+
+}
+
+.woocommerce-variation-add-to-cart {
+  //margin-top: 12em;
 }
 
 .select-items div:hover, .same-as-selected {
