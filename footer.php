@@ -10,7 +10,7 @@
 <div class="toppad-16 clearfix"></div>
 <div class="grid-container catalogue">
     <div class="light-grey-background text-center heebo ExtraBold fontsize-22 caps black toppad-3">
-        <a href="http://sites.ng15.co.uk/psf/jcb_ss_2019_flipbook/index.html" target="_blank" class="black">VIEW OUR LATEST CATALOGUE <span class="orange">&gt;&gt;</span></a></div>
+        <a href="<?php echo get_field('view_our_catalogue_link','option');?>" target="_blank" class="black">VIEW OUR LATEST CATALOGUE <span class="orange">&gt;&gt;</span></a></div>
 </div>
 
 <footer class="footer" role="contentinfo">
